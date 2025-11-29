@@ -1113,7 +1113,7 @@ function library:AddWindow(title, options)
 				local new_button = Prefabs:FindFirstChild("TabButton"):Clone()
 				new_button.Parent = tab_buttons
 				new_button.Text = tab_name
-				new_button.Size = UDim2.new(0, gNameLen(new_button), 0, 20)
+				new_button.Size = UDim2.new(0, math.max(150, gNameLen(new_button)), 0, 28)
 				new_button.ZIndex = new_button.ZIndex + (windows * 10)
 				new_button:GetChildren()[1].ZIndex = new_button:GetChildren()[1].ZIndex + (windows * 10)
 
